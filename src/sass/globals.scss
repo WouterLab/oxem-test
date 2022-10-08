@@ -1,0 +1,12 @@
+@import url("../fonts/gilroy/stylesheet.css");
+@import url("../fonts/nekst/stylesheet.css");
+@import "normalize.scss";
+@import "reset.scss";
+
+body {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
