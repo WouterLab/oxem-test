@@ -31,14 +31,20 @@
   border: none;
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1439px) {
   .fee {
     width: 320px;
   }
 }
 
+@media (max-width: 1119px) {
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 319px) {
+}
+
 @media (max-width: 768px) {
-  .fee {
-    width: 100%;
-  }
 }

@@ -1,5 +1,5 @@
 .App {
-  max-width: 1420px;
+  max-width: 1440px;
   margin-top: 213px;
 }
 
@@ -10,6 +10,10 @@
 }
 
 @media (max-width: 1439px) {
+  .App {
+    max-width: 1120px;
+    margin: 213px auto 0px
+  }
 }
 
 @media (max-width: 1119px) {
@@ -19,5 +23,8 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) {
+}
+
+@media (max-width: 319px) {
 }
