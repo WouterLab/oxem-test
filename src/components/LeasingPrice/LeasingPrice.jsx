@@ -1,10 +1,11 @@
 import styles from "./LeasingPrice.module.scss";
 
-const LeasingPrice = () => {
+const LeasingPrice = ({ leasingPrice, hideCalculate }) => {
   return (
     <div className={styles.leasingPrice}>
       <p className={styles.p}>Сумма договора лизинга</p>
-      <p className={styles.price}>4 467 313 ₽</p>
+      {!hideCalculate && <p className={styles.price}>{leasingPrice} ₽</p>}
+      {hideCalculate && <p className={styles.price}>. . .</p>}
     </div>
   );
 };

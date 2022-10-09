@@ -1,27 +1,53 @@
-import { useState } from "react";
+import { useState } from 'react';
 import Input from "../../ui/Input/Input";
 import styles from "./Fee.module.scss";
 
-const Fee = () => {
-  const [value, setValue] = useState(10);
+const Fee = ({
+  price,
+  fee,
+  setFee,
+  disabled,
+  firstFee,
+  setFirstFee,
+  setHideCalculate,
+}) => {
   const min = 10;
   const max = 60;
   const getBackgroundSize = () => {
     return {
-      backgroundSize: `${((value - 10) * 100) / 50}% 100%`,
+      backgroundSize: `${((fee - 10) * 100) / 50}% 100%`,
     };
   };
+  const [focused, setFocused] = useState(false);
+  const onFocus = () => setFocused(true);
+  const onBlur = () => setFocused(false);
+
   return (
     <div className={styles.fee}>
       <p className={styles.p}>Первоначальный взнос</p>
       <Input
-        value={value}
+        value={fee}
         getBackgroundSize={getBackgroundSize}
-        setValue={setValue}
+        setValue={setFee}
         max={max}
         min={min}
-        type='text'>
-        <input className={styles.inputInside} type='text' value={`${value}%`} />
+        price={price}
+        disabled={disabled}
+        leasing
+        firstFee={firstFee}
+        setFirstFee={setFirstFee}
+        fee={fee}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        setHideCalculate={setHideCalculate}>
+        <p className={`${styles.rouble} ${disabled && styles.disabled} ${focused && styles.hidden}`}>₽</p>
+        <input
+          className={styles.inputInside}
+          type='text'
+          readOnly
+          disabled={disabled}
+          value={`${fee}%`}
+        />
       </Input>
     </div>
   );

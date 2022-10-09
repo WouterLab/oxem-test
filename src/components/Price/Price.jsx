@@ -1,14 +1,12 @@
-import { useState } from "react";
 import Input from "../../ui/Input/Input";
 import styles from "./Price.module.scss";
 
-const Price = () => {
-  const [value, setValue] = useState(3000000);
+const Price = ({ price, setPrice, disabled, setHideCalculate }) => {
   const min = 1000000;
   const max = 6000000;
   const getBackgroundSize = () => {
     return {
-      backgroundSize: `${((value - 1000000) * 100) / 5000000}% 100%`,
+      backgroundSize: `${((price - 1000000) * 100) / 5000000}% 100%`,
     };
   };
 
@@ -16,14 +14,16 @@ const Price = () => {
     <div className={styles.price}>
       <p className={styles.p}>Стоимость автомобиля</p>
       <Input
-        value={value}
+        value={price}
         getBackgroundSize={getBackgroundSize}
-        setValue={setValue}
+        setValue={setPrice}
         max={max}
         min={min}
-        type='number'
-        isChangeble>
-        <p className={styles.inputInside}>₽</p>
+        disabled={disabled}
+        setHideCalculate={setHideCalculate}>
+        <p className={`${styles.inputInside} ${disabled && styles.disabled}`}>
+          ₽
+        </p>
       </Input>
     </div>
   );

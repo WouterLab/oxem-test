@@ -1,28 +1,28 @@
-import { useState } from "react";
 import Input from "../../ui/Input/Input";
 import styles from "./Leasing.module.scss";
 
-const Leasing = () => {
-  const [value, setValue] = useState(30);
-  const min = 10;
+const Leasing = ({ leasing, setLeasing, disabled, setHideCalculate }) => {
+  const min = 1;
   const max = 60;
   const getBackgroundSize = () => {
     return {
-      backgroundSize: `${((value - 10) * 100) / 50}% 100%`,
+      backgroundSize: `${((leasing - 1) * 100) / 59}% 100%`,
     };
   };
   return (
     <div className={styles.leasing}>
       <p className={styles.p}>Срок лизинга</p>
       <Input
-        value={value}
+        value={leasing}
         getBackgroundSize={getBackgroundSize}
-        setValue={setValue}
+        setValue={setLeasing}
         max={max}
         min={min}
-        isChangeble
-        type='number'>
-        <p className={styles.inputInside}>мес.</p>
+        disabled={disabled}
+        setHideCalculate={setHideCalculate}>
+        <p className={`${styles.inputInside} ${disabled && styles.disabled}`}>
+          мес.
+        </p>
       </Input>
     </div>
   );

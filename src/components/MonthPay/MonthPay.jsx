@@ -1,10 +1,11 @@
 import styles from "./MonthPay.module.scss";
 
-const MonthPay = () => {
+const MonthPay = ({ monthPay, hideCalculate }) => {
   return (
     <div className={styles.monthPay}>
       <p className={styles.p}>Ежемесячный платеж от</p>
-      <p className={styles.price}>114 455 ₽</p>
+      {!hideCalculate && <p className={styles.price}>{monthPay} ₽</p>}
+      {hideCalculate && <p className={styles.price}>. . .</p>}
     </div>
   );
 };

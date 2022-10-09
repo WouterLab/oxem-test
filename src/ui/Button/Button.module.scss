@@ -1,17 +1,13 @@
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 8px 16px 12px;
   width: 426px;
   height: 68px;
   background: #ff9514;
   border-radius: 40px;
   border: none;
-  font-family: "Nekst";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 36px;
-  color: #ffffff;
-  text-align: center;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -20,8 +16,46 @@
   background: #111111;
 }
 
+.btnText {
+  color: #ffffff;
+  font-family: "Nekst";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  animation: show .3s linear;
+}
+
 .button:active {
   background: #575757;
+}
+
+.loadingSpinner {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #f3f3f3; /* Light grey */
+  border-top: 3px solid transparent; /* Blue */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1439px) {

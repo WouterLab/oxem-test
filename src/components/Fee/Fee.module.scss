@@ -26,9 +26,34 @@
   top: 7px;
 }
 
+.rouble {
+  position: absolute;
+  font-family: "Nekst";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  top: 15px;
+  left: 150px;
+  color: #575757;
+}
+
+.hidden {
+  display: none;
+}
+
 .inputInside:focus {
   outline: none;
   border: none;
+}
+
+.inputInside:disabled {
+  color: #bcbcbc;
+  background: #fafafb;
+}
+
+.disabled {
+  color: #bcbcbc;
 }
 
 @media (max-width: 1439px) {
