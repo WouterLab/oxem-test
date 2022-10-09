@@ -1,0 +1,48 @@
+.button {
+  padding: 8px 16px 12px;
+  width: 426px;
+  height: 68px;
+  background: #ff9514;
+  border-radius: 40px;
+  border: none;
+  font-family: "Nekst";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background: #111111;
+}
+
+.button:active {
+  background: #575757;
+}
+
+@media (max-width: 1439px) {
+  .button {
+    width: 320px;
+  }
+}
+
+@media (max-width: 1119px) {
+  .button {
+    width: 345px;
+    margin-bottom: 156px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 64px;
+    font-size: 22px;
+    line-height: 20px;
+  }
+}

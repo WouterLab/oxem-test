@@ -13,7 +13,7 @@ const Leasing = () => {
   };
   return (
     <div className={styles.leasing}>
-      <p className={styles.p}>Стоимость автомобиля</p>
+      <p className={styles.p}>Срок лизинга</p>
       <Input
         value={value}
         getBackgroundSize={getBackgroundSize}

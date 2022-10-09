@@ -5,6 +5,7 @@ import LeasingPrice from "./components/LeasingPrice/LeasingPrice";
 import MonthPay from "./components/MonthPay/MonthPay";
 import Price from "./components/Price/Price";
 import Title from "./components/Title/Title";
+import Button from "./ui/Button/Button";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <div className={styles.counted}>
         <LeasingPrice />
         <MonthPay />
+        <Button />
       </div>
     </div>
   );

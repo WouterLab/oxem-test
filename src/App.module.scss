@@ -1,5 +1,6 @@
 .App {
   max-width: 1440px;
+  margin: 0 auto;
   margin-top: 213px;
 }
 
@@ -9,10 +10,24 @@
   margin-bottom: 44px;
 }
 
+.counted {
+  display: grid;
+  height: 81px;
+  grid-template-columns: 427px 427px 427px;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.counted:last-child {
+  align-items: flex-end;
+}
+
 @media (max-width: 1439px) {
   .App {
     max-width: 1120px;
-    margin: 213px auto 0px
+  }
+  .counted {
+    grid-template-columns: 320px 320px 320px;
   }
 }
 
@@ -20,11 +35,29 @@
   .values {
     flex-direction: column;
     gap: 32px;
+    margin-bottom: 37px;
+  }
+  .App {
+    margin-top: 64px;
+  }
+  .counted {
+    grid-template-columns: 1fr 1fr;
+    gap: 44px 32px;
+    height: auto;
   }
 }
 
 @media (max-width: 767px) {
-}
-
-@media (max-width: 319px) {
+  .values {
+    margin-bottom: 25px;
+  }
+  .counted {
+    grid-template-columns: 1fr;
+    gap: 0;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  .counted:last-child {
+    align-items: baseline;
+  }
 }

@@ -1,3 +1,42 @@
 .monthPay {
-    
+  width: 427px;
+}
+
+.p {
+  margin-bottom: 8px;
+}
+
+.price {
+  font-family: "Nekst";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 90%;
+  color: #333333;
+}
+
+@media (max-width: 1439px) {
+  .monthPay {
+    width: 320px;
+  }
+}
+
+@media (max-width: 1119px) {
+  .monthPay {
+    width: 332px;
+  }
+}
+
+@media (max-width: 767px) {
+  .monthPay {
+    margin-top: 29px;
+    width: 100%;
+  }
+  .price {
+    font-size: 22px;
+    line-height: 20px;
+  }
+  .p {
+    margin-bottom: 2px;
+  }
 }

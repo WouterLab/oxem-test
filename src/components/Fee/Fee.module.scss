@@ -38,13 +38,17 @@
 }
 
 @media (max-width: 1119px) {
+  .fee {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
-}
-
-@media (max-width: 319px) {
-}
-
-@media (max-width: 768px) {
+  .inputInside {
+    color: #333e48;
+    font-size: 22px;
+    line-height: 20px;
+    width: 67px;
+    height: 48px;
+  }
 }

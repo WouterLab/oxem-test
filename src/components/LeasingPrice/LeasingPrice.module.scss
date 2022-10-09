@@ -1,2 +1,42 @@
 .leasingPrice {
+  width: 427px;
+}
+
+.p {
+  margin-bottom: 8px;
+}
+
+.price {
+  font-family: "Nekst";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 90%;
+  color: #333333;
+}
+
+@media (max-width: 1439px) {
+  .leasingPrice {
+    width: 320px;
+  }
+}
+
+@media (max-width: 1119px) {
+  .leasingPrice {
+    width: 332px;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .leasingPrice {
+    width: 100%;
+  }
+  .price {
+    font-size: 22px;
+    line-height: 20px;
+  }
+  .p {
+    margin-bottom: 2px;
+  }
 }

@@ -26,13 +26,16 @@
 }
 
 @media (max-width: 1119px) {
+  .price {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
-}
-
-@media (max-width: 319px) {
-}
-
-@media (max-width: 768px) {
+  .inputInside {
+    color: #333e48;
+    font-size: 22px;
+    line-height: 20px;
+    top: 17px;
+  }
 }
