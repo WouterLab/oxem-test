@@ -1,0 +1,23 @@
+.App {
+  max-width: 1420px;
+  margin-top: 213px;
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+
+@media (max-width: 1439px) {
+}
+
+@media (max-width: 1119px) {
+  .values {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 320px) {
+}

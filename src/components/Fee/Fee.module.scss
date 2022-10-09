@@ -1,0 +1,44 @@
+.fee {
+  width: 427px;
+  height: 119px;
+}
+
+.p {
+  margin-bottom: 24px;
+}
+
+.inputInside {
+  padding: 15px 15px;
+  background: #ebebec;
+  border-radius: 16px;
+  border: none;
+  width: 69px;
+  height: 54px;
+  position: absolute;
+  font-family: "Nekst";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #575757;
+  right: 7px;
+  top: 7px;
+}
+
+.inputInside:focus {
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 1120px) {
+  .fee {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fee {
+    width: 100%;
+  }
+}

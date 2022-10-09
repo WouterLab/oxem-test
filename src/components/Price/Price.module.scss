@@ -1,0 +1,32 @@
+.price {
+  width: 427px;
+  height: 119px;
+}
+
+.p {
+  margin-bottom: 24px;
+}
+
+.inputInside {
+  position: absolute;
+  font-family: "Nekst";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  color: #575757;
+  right: 20px;
+  top: 14px;
+}
+
+@media (max-width: 1120px) {
+  .price {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .price {
+    width: 100%;
+  }
+}

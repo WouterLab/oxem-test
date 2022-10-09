@@ -3,10 +3,15 @@
 @import "normalize.scss";
 @import "reset.scss";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  padding: 0 48px;
 }
