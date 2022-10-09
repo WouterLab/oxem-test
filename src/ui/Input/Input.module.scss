@@ -116,9 +116,6 @@
   background: transparent;
 }
 
-@media (max-width: 1439px) {
-}
-
 @media (max-width: 1119px) {
   .inputRange {
     width: 95%;
@@ -131,5 +128,8 @@
     font-size: 22px;
     line-height: 20px;
     height: 60px;
+  }
+  .inputRange {
+    width: 90%;
   }
 }
