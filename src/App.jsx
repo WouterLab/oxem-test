@@ -24,16 +24,23 @@ function App() {
       setFee(60);
     } else if (Number(firstFee) < 100000) {
       setFee(10);
-    } else if (firstFee === '' || isNaN(fee) || firstFee == null) {
+    } else if (firstFee === "" || isNaN(fee) || firstFee == null) {
       setFee(10);
       setFirstFee(Math.round((price / 100) * fee));
     } else {
       setFee(Math.round(firstFee / (price / 100)));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [firstFee]);
 
   useEffect(() => {
-    setFirstFee(Math.round((price / 100) * fee));
+    if (fee > 60) {
+      setFee(60);
+    } else if (fee < 10) {
+      setFee(10);
+    } else {
+      setFirstFee(Math.round((price / 100) * fee));
+    }
   }, [price, fee]);
 
   useEffect(() => {

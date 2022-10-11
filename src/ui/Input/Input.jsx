@@ -22,7 +22,6 @@ const Input = ({
   const handleValue = (e) => {
     setHideCalculate(true);
     if (leasing) {
-      console.log(firstFee);
       setFirstFee(e.target.value);
       clearTimeout(timer);
       const newTimer = setTimeout(() => {
