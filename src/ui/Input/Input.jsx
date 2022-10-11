@@ -12,7 +12,6 @@ const Input = ({
   leasing,
   firstFee,
   setFirstFee,
-  fee,
   setHideCalculate,
   onFocus,
   onBlur,
@@ -25,7 +24,7 @@ const Input = ({
       setFirstFee(e.target.value);
       clearTimeout(timer);
       const newTimer = setTimeout(() => {
-        const newValue = Math.max(100000, Math.min(3600000, e.target.value));
+        const newValue = Math.round(Math.max(100000, Math.min(3600000, e.target.value)));
         setFirstFee(newValue);
         setHideCalculate(false);
       }, 1200);
@@ -34,7 +33,7 @@ const Input = ({
       setValue(e.target.value);
       clearTimeout(timer);
       const newTimer = setTimeout(() => {
-        const newValue = Math.max(min, Math.min(max, e.target.value));
+        const newValue = Math.round(Math.max(min, Math.min(max, e.target.value)));
         setValue(newValue);
         setHideCalculate(false);
       }, 1200);
