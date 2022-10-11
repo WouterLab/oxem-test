@@ -15,27 +15,21 @@ const Input = ({
   fee,
   setHideCalculate,
   onFocus,
-  onBlur
+  onBlur,
 }) => {
   const [timer, setTimer] = useState(null);
 
   const handleValue = (e) => {
-    setHideCalculate(true)
+    setHideCalculate(true);
     if (leasing) {
+      console.log(firstFee);
       setFirstFee(e.target.value);
       clearTimeout(timer);
       const newTimer = setTimeout(() => {
-        if (fee > 60 || firstFee < 36000000) {
-          setValue(60);
-          setHideCalculate(false)
-        } else if (fee < 10 || firstFee < 100000) {
-          setValue(10);
-          setHideCalculate(false)
-        } else {
-          setFirstFee(e.target.value);
-          setHideCalculate(false)
-        }
-      }, 700);
+        const newValue = Math.max(100000, Math.min(3600000, e.target.value));
+        setFirstFee(newValue);
+        setHideCalculate(false);
+      }, 1000);
       setTimer(newTimer);
     } else {
       setValue(e.target.value);
@@ -43,8 +37,8 @@ const Input = ({
       const newTimer = setTimeout(() => {
         const newValue = Math.max(min, Math.min(max, e.target.value));
         setValue(newValue);
-        setHideCalculate(false)
-      }, 700);
+        setHideCalculate(false);
+      }, 1000);
       setTimer(newTimer);
     }
   };

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import Input from "../../ui/Input/Input";
 import styles from "./Fee.module.scss";
 
@@ -10,6 +10,7 @@ const Fee = ({
   firstFee,
   setFirstFee,
   setHideCalculate,
+  hideCalculate,
 }) => {
   const min = 10;
   const max = 60;
@@ -40,7 +41,12 @@ const Fee = ({
         onFocus={onFocus}
         onBlur={onBlur}
         setHideCalculate={setHideCalculate}>
-        <p className={`${styles.rouble} ${disabled && styles.disabled} ${focused && styles.hidden}`}>₽</p>
+        <p
+          className={`${styles.rouble} ${disabled && styles.disabled} ${
+            focused && styles.hidden
+          } ${hideCalculate && styles.hidden}`}>
+          ₽
+        </p>
         <input
           className={styles.inputInside}
           type='text'

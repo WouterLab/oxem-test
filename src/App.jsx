@@ -20,7 +20,16 @@ function App() {
   const [hideCalculate, setHideCalculate] = useState(false);
 
   useEffect(() => {
-    setFee(Math.round(firstFee / (price / 100)));
+    if (fee > 60 || Number(firstFee) > 36000000) {
+      setFee(60);
+    } else if (fee < 10 || Number(firstFee) < 100000) {
+      setFee(10);
+    } else if (firstFee === '' || isNaN(fee) || firstFee == null) {
+      setFee(10);
+      setFirstFee(Math.round((price / 100) * fee));
+    } else {
+      setFee(Math.round(firstFee / (price / 100)));
+    }
   }, [firstFee]);
 
   useEffect(() => {
@@ -84,6 +93,7 @@ function App() {
           disabled={isRequstSended}
           firstFee={firstFee}
           setFirstFee={setFirstFee}
+          hideCalculate={hideCalculate}
           setHideCalculate={setHideCalculate}
         />
         <Leasing
