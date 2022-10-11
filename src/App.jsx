@@ -24,7 +24,7 @@ function App() {
       setFee(60);
     } else if (Number(firstFee) < 100000) {
       setFee(10);
-    } else if (firstFee === "" || isNaN(fee) || firstFee == null) {
+    } else if (!firstFee) {
       setFee(10);
       setFirstFee(Math.round((price / 100) * fee));
     } else {
