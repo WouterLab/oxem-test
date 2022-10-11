@@ -29,7 +29,7 @@ const Input = ({
         const newValue = Math.max(100000, Math.min(3600000, e.target.value));
         setFirstFee(newValue);
         setHideCalculate(false);
-      }, 1000);
+      }, 1200);
       setTimer(newTimer);
     } else {
       setValue(e.target.value);
@@ -38,7 +38,7 @@ const Input = ({
         const newValue = Math.max(min, Math.min(max, e.target.value));
         setValue(newValue);
         setHideCalculate(false);
-      }, 1000);
+      }, 1200);
       setTimer(newTimer);
     }
   };
