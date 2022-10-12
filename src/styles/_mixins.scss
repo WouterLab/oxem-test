@@ -1,0 +1,33 @@
+@mixin input-text {
+  font-family: "Nekst";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  color: #575757;
+}
+
+@mixin counted-price {
+  font-family: "Nekst";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 90%;
+  color: #333333;
+}
+
+@mixin appearance-none {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+@mixin input-range {
+  appearance: none;
+  background: #ff9514;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  cursor: grabbing;
+}

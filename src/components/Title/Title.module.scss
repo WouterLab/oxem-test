@@ -1,19 +1,11 @@
+@use "../../styles/mixins";
+
 .title {
-  font-family: "Nekst";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 54px;
-  line-height: 90%;
+  @include mixins.counted-price;
   color: #111111;
   margin-bottom: 32px;
   max-width: 753px;
   transition: all 0.3s;
-}
-
-@media (max-width: 1439px) {
-}
-
-@media (max-width: 1119px) {
 }
 
 @media (max-width: 767px) {

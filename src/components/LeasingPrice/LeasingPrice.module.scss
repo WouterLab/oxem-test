@@ -1,3 +1,5 @@
+@use "../../styles/mixins";
+
 .leasingPrice {
   width: 427px;
   height: 81px;
@@ -8,12 +10,7 @@
 }
 
 .price {
-  font-family: "Nekst";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 54px;
-  line-height: 90%;
-  color: #333333;
+  @include mixins.counted-price
 }
 
 @media (max-width: 1439px) {

@@ -1,3 +1,6 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
 .price {
   width: 427px;
   height: 119px;
@@ -9,12 +12,7 @@
 
 .inputInside {
   position: absolute;
-  font-family: "Nekst";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 36px;
-  color: #575757;
+  @include mixins.input-text;
   right: 20px;
   top: 14px;
 }
@@ -37,7 +35,7 @@
 
 @media (max-width: 767px) {
   .inputInside {
-    color: #333e48;
+    color: variables.$phoneColor;
     font-size: 22px;
     line-height: 20px;
     top: 17px;

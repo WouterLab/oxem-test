@@ -1,3 +1,6 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
 .input {
   display: flex;
   flex-direction: column;
@@ -13,12 +16,7 @@
 }
 
 .inputNum {
-  font-family: "Nekst";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 36px;
-  color: #575757;
+  @include mixins.input-text;
   background: #f3f3f4;
   border-radius: 16px;
   -webkit-transition: all 0.5s;
@@ -41,7 +39,7 @@
 }
 
 .inputRange:disabled {
-  background-image: linear-gradient(#ffd5a1, #ffd5a1);
+  background-image: linear-gradient(variables.$range-color, variables.$range-color);
 }
 
 .inputRange {
@@ -51,69 +49,45 @@
   position: absolute;
   bottom: 0px;
   background: #e1e1e1;
-  background-image: linear-gradient(#ff9514, #ff9514);
+  background-image: linear-gradient(variables.$range-color, variables.$range-color);
   background-repeat: no-repeat;
   z-index: 10;
 }
 
 .inputRange::-webkit-slider-thumb {
-  appearance: none;
-  background: #ff9514;
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
-  cursor: grabbing;
+  @include mixins.input-range;
 }
 
 .inputRange:disabled::-webkit-slider-thumb {
-  background: #ffd5a1;
+  background: variables.$range-color;
 }
 
 .inputRange::-moz-range-thumb {
-  appearance: none;
-  background: #ff9514;
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
-  cursor: grabbing;
+  @include mixins.input-range;
 }
 
 .inputRange:disabled::-moz-range-thumb {
-  background: #ffd5a1;
+  background: variables.$range-color;
 }
 
 .inputRange::-ms-thumb {
-  appearance: none;
-  background: #ff9514;
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
-  cursor: grabbing;
+  @include mixins.input-range;
 }
 
 .inputRange:disabled::-ms-thumb {
-  background: #ffd5a1;
+  background: variables.$range-color;
 }
 
 .inputRange::-webkit-slider-runnable-track {
-  appearance: none;
-  box-shadow: none;
-  border: none;
-  background: transparent;
+  @include mixins.appearance-none;
 }
 
 .inputRange::-moz-range-track {
-  appearance: none;
-  box-shadow: none;
-  border: none;
-  background: transparent;
+  @include mixins.appearance-none;
 }
 
 .inputRange::-ms-track {
-  appearance: none;
-  box-shadow: none;
-  border: none;
-  background: transparent;
+  @include mixins.appearance-none;
 }
 
 @media (max-width: 1119px) {
@@ -124,7 +98,7 @@
 
 @media (max-width: 767px) {
   .inputNum {
-    color: #333e48;
+    color: variables.$phoneColor;
     font-size: 22px;
     line-height: 20px;
     height: 60px;

@@ -1,3 +1,6 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
 .fee {
   width: 427px;
   height: 119px;
@@ -15,27 +18,19 @@
   width: 69px;
   height: 54px;
   position: absolute;
-  font-family: "Nekst";
-  font-style: normal;
-  font-weight: 900;
+  @include mixins.input-text;
   font-size: 20px;
   line-height: 24px;
   text-align: right;
-  color: #575757;
   right: 7px;
   top: 7px;
 }
 
 .rouble {
+  @include mixins.input-text;
   position: absolute;
-  font-family: "Nekst";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 36px;
   top: 13px;
   left: 150px;
-  color: #575757;
 }
 
 .hidden {
@@ -53,7 +48,7 @@
 }
 
 .disabled {
-  color: #bcbcbc !important
+  color: #bcbcbc !important;
 }
 
 @media (max-width: 1439px) {
@@ -68,19 +63,21 @@
   }
 }
 
+@mixin phone-input {
+  color: variables.$phoneColor;
+  font-size: 22px;
+  line-height: 20px;
+}
+
 @media (max-width: 767px) {
   .inputInside {
-    color: #333e48;
-    font-size: 22px;
-    line-height: 20px;
+    @include phone-input;
     width: 67px;
     height: 48px;
     padding: 15px 10px;
   }
   .rouble {
-    color: #333e48;
-    font-size: 22px;
-    line-height: 20px;
+    @include phone-input;
     top: 18px;
     left: 117px;
   }
